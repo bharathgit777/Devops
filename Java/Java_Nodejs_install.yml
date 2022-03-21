@@ -1,5 +1,5 @@
 ---
-- name: Install Java and NodeJS npm1
+- name: Install Java
  become: yes
  hosts: all
  tasks:
@@ -8,9 +8,4 @@
       name: openjdk-11-jdk
       state: Present
       update_cache: yes
-    - name: Install Node js
-       ansible.builtin.apt:
-       name: nodejs npm
-       state: Present
-       update_cache: yes
 ---
