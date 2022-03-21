@@ -1,5 +1,5 @@
 ---
-- name: Install Java and NodeJS
+- name: Install Java and NodeJS npm
  become: yes
  hosts: all
  tasks:
