@@ -1,3 +1,16 @@
 ---
-
+- name: Install Java and NodeJS
+ become: yes
+ hosts: all
+ tasks:
+    - name: install java 
+      ansible.builtin.apt:
+      name: openjdk-11-jdk
+      state: Present
+      update_cache: yes
+    - name: Install Node js
+       ansible.builtin.apt:
+       name: nodejs npm
+       state: Present
+       update_cache: yes
 ---
